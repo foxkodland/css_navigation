@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="референс.jpg" alt="" style="position: fixed; top: 0; right: 0;">
+    <div class="container">
+        <nav>
+            <p class="active"><a href="#">Home</a></p>
+            <p><a href="#">About</a></p>
+            <p><a href="#">Blog</a></p>
+            <p><a href="#">Contact</a></p>
+        </nav>
+    </div>
+
+
+    <script>
+        // доп. для теста на 1 странице
+        let all_p = document.querySelectorAll('nav p')
+        all_p.forEach((p) => {
+            p.addEventListener('click', function (){
+                all_p.forEach((p) => {
+                    p.classList.remove('active')
+                })
+                p.classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>
